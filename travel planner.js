@@ -14,11 +14,12 @@ const navElemArr = [navOpenBtn, navCloseBtn, overlay];
 
 const navToggleEvent = function (elem) 
 {
-for (let i = 0; i = 200) {
+for (let i = 0; i = 200;) {
     header.classList.add("active");
     goTopBtn.classList.add("active");
-} else {
+} 
+{
     header.classList.remove("active");
     goTopBtn.classList.remove("active");
 }
-});
+};
