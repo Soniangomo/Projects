@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glitch & Grind</title>
+<!--custome css link-->
+<link rel="stylesheet" href="css/Glitch & Grind.css">
+<!--google font link-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap">
+</head>
+
+<body>
+<!-- NAV -->
+<nav>
+  <div class="logo">GLITCH<span>&</span>GRIND</div>
+  <div class="nav-links">
+    <a href="#">HOME</a>
+    <a href="#">ABOUT</a>
+    <a href="#">CONTACT</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <h1 class="glitch" data-text="POWERED BY CHAOS">POWERED BY CHAOS</h1>
+  <p class="hero-sub">☕ caffeine · 🎵 beats · 🎮 controllers · 💻 code</p>
+  <p class="hero-tagline">// fuel before function() · soundtrack to every commit</p>
+  <button class="cta-btn">ENTER THE GRID</button>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num" id="cups">0</div>
+    <div class="stat-label">CUPS TODAY</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num" id="commits">0</div>
+    <div class="stat-label">COMMITS</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num" id="hours">0</div>
+    <div class="stat-label">GAMING HRS</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num" id="tracks">0</div>
+    <div class="stat-label">TRACKS PLAYED</div>
+  </div>
+</div>
+
+<!-- CARDS -->
+<section class="cards-section">
+  <p class="section-label">// passions.exe</p>
+  <h2 class="section-title">WHAT KEEPS ME ALIVE</h2>
+  <div class="cards-grid">
+    <div class="card card-coffee">
+      <span class="card-icon">☕</span>
+      <div class="card-name">COFFEE</div>
+      <div class="card-line"><strong>Fuel before</strong> <code>function()</code><br>No espresso, no debuggo.</div>
+    </div>
+    <div class="card card-music">
+      <span class="card-icon">🎵</span>
+      <div class="card-name">MUSIC</div>
+      <div class="card-line"><strong>Soundtrack</strong> to every commit.<br>Lo-fi beats hit different at 2am.</div>
+    </div>
+    <div class="card card-gaming">
+      <span class="card-icon">🎮</span>
+      <div class="card-name">GAMING</div>
+      <div class="card-line"><strong>Side quests</strong> &gt; deadlines.<br>Respawn. Retry. Repeat.</div>
+    </div>
+    <div class="card card-coding">
+      <span class="card-icon">💻</span>
+      <div class="card-name">CODING</div>
+      <div class="card-line"><strong>No bugs.</strong> Only undocumented features.<br>console.log("still alive");</div>
+    </div>
+  </div>
+</section>
+
+<!-- TERMINAL -->
+<section class="terminal-section">
+  <div class="terminal">
+    <div class="terminal-bar">
+      <div class="dot dot-r"></div>
+      <div class="dot dot-y"></div>
+      <div class="dot dot-g"></div>
+      <span class="terminal-title">glitch@grind ~ daily_routine.sh</span>
+    </div>
+    <div class="terminal-body">
+      <div><span class="t-prompt">$ </span><span class="t-cmd">./start_day.sh</span></div>
+      <div class="t-out">→ Brewing coffee... <span class="t-yellow">☕ DONE</span></div>
+      <div class="t-out">→ Loading playlist... <span class="t-green">🎵 VIBE SET</span></div>
+      <div class="t-out">→ Spinning up dev env... <span class="t-cyan">💻 READY</span></div>
+      <div class="t-out">→ One quick game first... <span class="t-pink">🎮 3 HOURS LATER</span></div>
+      <div><span class="t-prompt">$ </span><span class="t-cmd">git commit -m "productive day"</span></div>
+      <div class="t-out">→ [main] 1 file changed, ∞ vibes added</div>
+      <div><span class="t-prompt">$ </span><span class="cursor"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Made with <span>☕ + 🎵 + 🎮 + 💻</span> and way too little sleep.</p>
+  <p style="margin-top:0.5rem;font-size:0.65rem;">© 2026 GLITCH & GRIND · ALL BUGS RESERVED</p>
+</footer>
+
+<script src="Glitch & Grind.js"></script>
+</body>
+</html>
