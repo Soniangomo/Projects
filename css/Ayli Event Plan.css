@@ -1,0 +1,438 @@
+/* ===========================
+   Root Variables & Reset
+   =========================== */
+:root {
+  --primary-color: #22223b;
+  --secondary-color: #4a4e69;
+  --accent-color: #f2e9e4;
+  --highlight-color: #9a8c98;
+  --button-color: #c9ada7;
+  --text-color: #22223b;
+  --background: #f2e9e4;
+  --primary: #b983ff;
+  --secondary: #f5e9ff;
+  --accent: #f7c8e0;
+  --text: #3c1e5d;
+  --white: #fff;
+  --shadow: 0 4px 12px rgba(185, 131, 255, 0.12);
+  --radius: 10px;
+  --border-radius: 8px;
+  --transition: 0.3s;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===========================
+   Typography & Body
+   =========================== */
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: var(--secondary);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* ===========================
+   Header & Navigation
+   =========================== */
+header {
+  background: var(--primary);
+  box-shadow: var(--shadow);
+}
+
+section .main-section {
+  margin-top: 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul > li > a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+nav ul > li > a:hover {
+  color: var(--accent);
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: var(--secondary);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  padding: 0.5em 0;
+  z-index: 100;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul ul li {
+  width: 100%;
+}
+
+nav ul ul li a {
+  color: var(--primary-color);
+  padding: 0.7em 1.5em;
+  display: block;
+  text-align: left;
+  font-weight: 400;
+  border-radius: var(--border-radius);
+  transition: background var(--transition), color var(--transition);
+}
+
+nav ul ul li a:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* Responsive navigation */
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+}
+
+/* ===========================
+   Hero Section
+   =========================== */
+.hero {
+  background: linear-gradient(120deg, var(--primary) 60%, var(--accent) 100%);
+  color: var(--white);
+  padding: 5rem 1rem 4rem 1rem;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.button,
+button {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--primary);
+  padding: 0.9rem 2.2rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: background var(--transition), color var(--transition);
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.button:hover,
+button:hover {
+  background: var(--white);
+  color: var(--accent);
+}
+
+/* ===========================
+   About, Services, Contact Sections
+   =========================== */
+.about, .services, .contact {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.about h2, .services h2, .contact h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.service-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service {
+  flex: 1 1 200px;
+  background: var(--secondary);
+  margin: 0.8rem 0;
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(185, 131, 255, 0.08);
+  text-align: center;
+  transition: transform 0.2s;
+}
+.service:hover {
+  transform: translateY(-6px) scale(1.025);
+}
+
+/* ===========================
+   Gallery Section
+   =========================== */
+.gallery {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1.2rem;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: var(--radius);
+  object-fit: cover;
+  height: 180px;
+}
+
+/* ===========================
+   Other Events Section
+   =========================== */
+.others {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+.others h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.others-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1.2rem;
+}
+.other-event {
+  background: var(--secondary);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(185, 131, 255, 0.08);
+  text-align: center;
+}
+.other-event img {
+  width: 100%;
+  height: 120px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  margin-bottom: 0.7rem;
+}
+.other-event h3 {
+  margin: 0.5rem 0 0.3rem 0;
+}
+
+/* ===========================
+   Form Styles
+   =========================== */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.contact label {
+  font-weight: 600;
+}
+
+.contact input,
+.contact textarea {
+  padding: 0.65rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+}
+
+.form-message {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  color: #c72c41;
+  min-height: 1.3em;
+}
+
+/* ===========================
+   Product Grid (if needed)
+   =========================== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.product {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.product:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+}
+
+.product img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.product h3 {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.product p {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+.product .price {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+footer {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  border-radius: var(--radius) var(--radius) 0 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .products {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .service-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about, .services, .contact, .gallery, .others {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav h1, .logo {
+    font-size: 1.3rem;
+  }
+  .hero-content h1 {
+    font-size: 1.2rem;
+  }
+  .product img, .gallery-grid img {
+    height: 160px;
+  }
+  .other-event img {
+    height: 80px;
+  }
+}
